@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-abonnemang-agent"
+version = "0.1.0"
+description = "Prototype backend for an AI subscription management assistant"
+authors = [{name = "AI Assistant"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic>=1.10",
+]
+
+[project.optional-dependencies]
+development = [
+    "pytest",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["."]
